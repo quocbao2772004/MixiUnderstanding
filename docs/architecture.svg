@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title description">
+  <title id="title">QCES processing pipeline</title>
+  <desc id="description">Audio and a natural-language question are grounded, separated into evidence and residual audio, and evaluated by grounded AudioQA and leakage checks.</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <linearGradient id="qces" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .heading { font: 700 25px Inter, ui-sans-serif, system-ui, sans-serif; fill: #0f172a; }
+      .label { font: 700 16px Inter, ui-sans-serif, system-ui, sans-serif; fill: #0f172a; }
+      .small { font: 500 13px Inter, ui-sans-serif, system-ui, sans-serif; fill: #64748b; }
+      .white { fill: #ffffff; }
+      .line { fill: none; stroke: #64748b; stroke-width: 2.5; marker-end: url(#arrow); }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 14; filter: url(#shadow); }
+    </style>
+  </defs>
+
+  <rect width="1280" height="520" rx="24" fill="url(#canvas)"/>
+  <text x="48" y="54" class="heading">Question-Conditioned Evidence Separation</text>
+  <text x="48" y="82" class="small">Ground the question, isolate audible evidence, and verify what the model removed.</text>
+
+  <rect class="card" x="48" y="126" width="205" height="92"/>
+  <circle cx="82" cy="160" r="15" fill="#dbeafe"/>
+  <path d="M75 160h4l6-7v14l-6-7h-4zM90 154c4 4 4 8 0 12M95 150c7 7 7 13 0 20" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="110" y="158" class="label">Audio mixture</text>
+  <text x="110" y="181" class="small">polyphonic waveform</text>
+
+  <rect class="card" x="48" y="302" width="205" height="92"/>
+  <circle cx="82" cy="336" r="15" fill="#ede9fe"/>
+  <path d="M76 331h12M76 336h9M76 341h6" stroke="#7c3aed" stroke-width="2" stroke-linecap="round"/>
+  <text x="110" y="334" class="label">Question</text>
+  <text x="110" y="357" class="small">natural-language query</text>
+
+  <rect class="card" x="318" y="126" width="218" height="92"/>
+  <text x="342" y="158" class="label">Temporal localization</text>
+  <text x="342" y="181" class="small">event spans and roles</text>
+
+  <rect class="card" x="318" y="302" width="218" height="92"/>
+  <text x="342" y="334" class="label">Question grounding</text>
+  <text x="342" y="357" class="small">semantic conditioning</text>
+
+  <rect x="601" y="194" width="216" height="132" rx="18" fill="url(#qces)" filter="url(#shadow)"/>
+  <text x="709" y="242" text-anchor="middle" class="label white">QCES separator</text>
+  <text x="709" y="269" text-anchor="middle" class="small white">question-conditioned</text>
+  <text x="709" y="290" text-anchor="middle" class="small white">evidence factorization</text>
+
+  <rect class="card" x="881" y="126" width="170" height="92"/>
+  <text x="905" y="158" class="label">Evidence</text>
+  <text x="905" y="181" class="small">answer-relevant audio</text>
+
+  <rect class="card" x="881" y="302" width="170" height="92"/>
+  <text x="905" y="334" class="label">Residual</text>
+  <text x="905" y="357" class="small">removed audio</text>
+
+  <rect class="card" x="1094" y="126" width="146" height="92"/>
+  <text x="1118" y="158" class="label">AudioQA</text>
+  <text x="1118" y="181" class="small">grounded answer</text>
+
+  <rect class="card" x="1094" y="302" width="146" height="92"/>
+  <text x="1118" y="334" class="label">Audit</text>
+  <text x="1118" y="357" class="small">leakage checks</text>
+
+  <rect x="488" y="437" width="304" height="54" rx="14" fill="#0f172a"/>
+  <text x="640" y="470" text-anchor="middle" class="label white">Answer + reproducible audit artifacts</text>
+
+  <path class="line" d="M253 172H318"/>
+  <path class="line" d="M253 348H318"/>
+  <path class="line" d="M536 172C568 172 568 224 601 224"/>
+  <path class="line" d="M536 348C568 348 568 296 601 296"/>
+  <path class="line" d="M253 172C430 172 430 260 601 260"/>
+  <path class="line" d="M817 224C849 224 849 172 881 172"/>
+  <path class="line" d="M817 296C849 296 849 348 881 348"/>
+  <path class="line" d="M1051 172H1094"/>
+  <path class="line" d="M1051 348H1094"/>
+  <path class="line" d="M1167 218V247C1167 423 792 408 792 451"/>
+  <path class="line" d="M1094 348H1058C948 348 948 464 792 464"/>
+</svg>

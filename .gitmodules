@@ -1,0 +1,9 @@
+[submodule "code/baseline/audio_understanding/audio-flamingo"]
+	path = code/baseline/audio_understanding/audio-flamingo
+	url = https://github.com/NVIDIA/audio-flamingo.git
+[submodule "code/baseline/distill_method/DMD2"]
+	path = code/baseline/distill_method/DMD2
+	url = https://github.com/tianweiy/DMD2.git
+[submodule "code/baseline/teacher/MMEdit"]
+	path = code/baseline/teacher/MMEdit
+	url = https://github.com/ty0402/MMEdit.git

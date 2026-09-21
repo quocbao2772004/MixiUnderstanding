@@ -1,0 +1,3 @@
+-r requirements-data.txt
+torch==2.2.2
+torchlibrosa==0.1.0

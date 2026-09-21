@@ -1,0 +1,65 @@
+# Local credentials (never commit)
+.env
+.env.*
+!.env.example
+
+# Raw and generated audio
+*.wav
+*.wave
+*.mp3
+*.flac
+*.m4a
+*.aac
+*.ogg
+*.opus
+*.aif
+*.aiff
+
+# Python environments and caches
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local model/data checkouts and generated experiment artifacts
+/AudioTime-recovered/
+/checkpoints/
+/code/baseline/
+/data/
+/data_full/
+/outputs/
+/upstream/
+
+# Logs and document build intermediates
+*.log
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+
+# Local-only research notes and reports
+/QCES_*.md
+/notes/
+/paper/
+/reports/
+/plan_grounded_audiosep.md
+/target.md
+
+# Machine-specific and one-off experiment launchers
+# Portable, supported entrypoints live in /workflows.
+/run_qces_*.sh
+/code/mixi_understanding/scripts/*.sh
+/live_demo/run.sh
+
+# Editor and OS metadata
+.DS_Store
+*.swp
+*~

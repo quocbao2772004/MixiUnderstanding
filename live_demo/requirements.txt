@@ -1,0 +1,7 @@
+streamlit==1.32.0
+streamlit-mic-recorder==0.0.8
+numpy==1.26.4
+pyarrow==17.0.0
+scipy==1.13.1
+soundfile==0.12.1
+Pillow==10.4.0

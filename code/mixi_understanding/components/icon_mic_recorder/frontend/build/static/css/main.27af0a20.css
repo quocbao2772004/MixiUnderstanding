@@ -1,0 +1,85 @@
+html,body,#root,.App {
+  width:100%;
+  height:52px;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background:transparent;
+}
+
+.App {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.myButton {
+  position:relative;
+  width:48px!important;
+  height:48px!important;
+  min-width:48px!important;
+  min-height:48px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  cursor:pointer;
+  touch-action:manipulation;
+  font-size:0!important;
+  line-height:0;
+  transition:background-color .18s ease,color .18s ease,box-shadow .18s ease;
+}
+
+.App.light .myButton {
+  color:#111827!important;
+  background:#ffffff!important;
+  border:1px solid #d9dde5!important;
+}
+.App.dark .myButton {
+  color:#ffffff!important;
+  background:#111318!important;
+  border:1px solid #30343b!important;
+}
+.App.light .myButton:hover { color:#000000!important; background:#f3f4f6!important; border-color:#b8bec9!important; }
+.App.dark .myButton:hover { color:#ffffff!important; background:#20242a!important; border-color:#59606b!important; }
+.App.light .myButton:active { background:#e5e7eb!important; }
+.App.dark .myButton:active { background:#292e35!important; }
+.myButton:focus-visible { outline:3px solid rgba(22,138,255,.48); outline-offset:1px; }
+
+.myButton:before {
+  content:"";
+  display:block;
+  width:24px;
+  height:24px;
+  margin:auto;
+  background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z'/%3E%3Cpath d='M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z'/%3E%3Cpath d='M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+.myButton.recording {
+  color:#fff!important;
+  background:#dc2626!important;
+  box-shadow:0 0 0 5px rgba(220,38,38,.13)!important;
+  animation:qces-recording 1.3s ease-in-out infinite;
+}
+
+.myButton.recording:before {
+  width:15px;
+  height:15px;
+  border-radius:3px;
+  background:#fff;
+  -webkit-mask:none;
+  mask:none;
+}
+
+@keyframes qces-recording {
+  0%,100% { box-shadow:0 0 0 4px rgba(220,38,38,.10); }
+  50% { box-shadow:0 0 0 8px rgba(220,38,38,.18); }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .myButton { transition:none; }
+  .myButton.recording { animation:none; }
+}

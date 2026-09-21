@@ -1,0 +1,3 @@
+# Isolated environment for controlled Vietnamese TTS generation.
+# VieNeu v3 Turbo defaults to ONNX/CPU and downloads its model on first use.
+vieneu==3.2.4

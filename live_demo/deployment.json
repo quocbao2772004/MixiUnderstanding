@@ -1,0 +1,21 @@
+{
+  "name": "QCES live demo",
+  "public_url": "https://mixiunderstanding.solanai.us",
+  "entrypoint": "live_demo/app.py",
+  "launcher": "workflows/live-demo.sh",
+  "canonical_source": "code/mixi_understanding/apps/qces_audio_chat_demo.py",
+  "server": {
+    "address": "127.0.0.1",
+    "port": 8515,
+    "health_endpoint": "/_stcore/health"
+  },
+  "local_only_runtime_assets": [
+    "Qwen/Qwen2-Audio-7B-Instruct",
+    "microsoft/wavlm-base-plus-sv",
+    "khanhld/chunkformer-rnnt-large-vie",
+    "outputs/qces_label_clap_public22_v1.pt",
+    "outputs/qces_public22_identity_tf_refiner_v1/best.pt",
+    "code/baseline/audiosep/checkpoint/hf_audiosep/pytorch_model.bin",
+    "checkpoints/MossFormer2_SS_16K/last_best_checkpoint.pt"
+  ]
+}
